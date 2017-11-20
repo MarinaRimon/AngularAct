@@ -16,9 +16,9 @@ app.controller("movieCtrl", function ($scope, $http) {
             for (var i = 0; i < response.data.length; i++) {
                 $scope.movies.push(
                     new Movie (response.data[i].movieName,
-                        response.data[i].movieLength,
-                        response.data[i].movieActor,
-                        response.data[i].movieDirector))
+                               response.data[i].movieLength,
+                               response.data[i].movieActor,
+                               response.data[i].movieDirector))
             }
             //alert("success" + JSON.stringify(response.status));
         }, function myError(response) {
