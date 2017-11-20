@@ -16,9 +16,7 @@
     <h1>Actors in Gallery</h1>
 
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      Search: <input type="text" ng-model="query" />
-      
-      Order By: <select ng-model="orderProp">
+      Search: <input type="text" ng-model="query" /> Order By: <select ng-model="orderProp">
           <option value="firstName">firstName</option>
           <option value="lastName">lastName</option>
         </select>
@@ -31,14 +29,33 @@
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" ng-repeat="actor in actors | filter : query | orderBy: orderProp">
           <!-- repeat of colom like for loop-->
           <div class="actor">
-            <a rel="stylesheet" href="{{actor.imbdLink}}"> <img src="{{actor.image}}" class="img-responsive" alt="Image"> </a>
-            {{actor.firstName}} {{actor.lastName}}
+            <a rel="stylesheet" href="{{actor.imbdLink}}"> <img src="{{actor.image}}" class="img-responsive" alt="Image"> </a>            {{actor.firstName}} {{actor.lastName}}
           </div>
         </div>
         <!-- rowEnd-->
       </div>
     </div>
   </div>
+
+  <!-- start create a directive 20 11 2017 -->
+
+  <!-- <div ng-controller="serviceCtrl">
+    <h1>Service History</h1>
+    <ul>
+      <car-service ng-repeat="service in services"></car-service>
+     </ul>
+  </div> -->
+
+  <div ng-controller="movieCtrl">
+    <h1>Movie List</h1>
+    <ul>
+      <movie-service ng-repeat="movie in movies"></movie-service>
+    </ul>
+  </div>
+
+
+  <!-- end create a directive 20 11 2017 -->
+
 
   <!-- <div ng-controller="actCtrl">
         <h1>Actors in Galery</h1>
