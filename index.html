@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="style.css">
   <script src="app.js"></script>
   <script src="actCtrl.js"></script>
+  <script src="movieCtrl.js"></script>
+  <script src="movieDirective.js"></script>
+  <script src="actCtrl.js"></script>
+
 </head>
 
 
@@ -49,7 +53,8 @@
   <div ng-controller="movieCtrl">
     <h1>Movie List</h1>
     <ul>
-      <movie-service ng-repeat="movie in movies"></movie-service>
+      <movie-service ng-repeat="movie in movies">my movie</movie-service>
+    
     </ul>
   </div>
 
